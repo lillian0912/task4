@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>css for blog </title>
+    <link rel="stylesheet" href="styles.css">
+
+  <style>
+    
+
+    .title3_1{
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    padding-left: 1.5em;
+    }
+
+    .title3_1::before{
+ content: attr(data-no);
+ position: absolute;
+ left: 0;
+ top: 0;
+ margin-right: 5px;
+ color: #bbb;
+    }
+    h1 {
+	position: relative;
+	padding: 0 .5em .5em 2em;
+	width: 80%;
+  border-bottom: 5px solid #ff5a5f;
+  
+
+}
+h1::before,
+h1::after {
+	position: absolute;
+	content: '';
+	border-radius: 100%
+}
+h1::before {
+	top: .2em;
+	left: .2em;
+	width: 18px;
+	height: 18px;
+	background-color: rgba(255,90,95,.5);
+	z-index: 2;
+}
+h1::after {
+	top: .7em;
+	left: .7em;
+	width: 13px;
+	height: 13px;
+	background-color: rgba(255,90,95,.2);
+}
+
+.heading-31 {
+    position: relative;
+    padding: .3em 0 .2em 1em;
+
+    width: 15%;
+    border-bottom: 5px dotted #7e494e;
+    color: #333333;
+}
+
+.heading-31::before {
+    position: absolute;
+    top: 0;
+    left: .3em;
+    transform: rotate(55deg);
+    height: 13px;
+    width: 14px;
+    background: #7e494e;
+    content: '';
+}
+
+.heading-31::after {
+    position: absolute;
+    transform: rotate(15deg);
+    top: .6em;
+    left: 0;
+    height: 11px;
+    width: 11px;
+    background: #7e494e;
+    content: '';
+}
+
+
+    
+
+    /* 矢印風----------------------------------------------*/
+.more-btn {
+	--more-btn-color:#333;/*矢印と文字の色はここで設定*/
+	text-align: center;/*ボタン中央寄せ（右寄せにしたいときはrightに変更）*/
+}
+
+.more-btn a {
+	position: relative; /*位置（ここを基準に）*/
+	padding: 0 3em 0 .5em; /*内側余白調整（上右下左）*/
+	color: var(--more-btn-color);  /*リンク文字色*/
+	text-decoration: none; /*リンク下線を消す*/
+	outline: none; /*枠線を消す*/
+}
+
+.more-btn a::before,
+.more-btn a::after{
+	content: ''; /*矢印部分作成*/
+	position: absolute; /*位置（下線と矢印を配置する）*/
+	background: var(--more-btn-color); /*矢印の色*/
+	height: 1px; /*線の太さ*/
+	transition: all .3s; /*なめらかな動き*/
+}
+
+.more-btn a::before {
+	bottom: -10px; /*下線の下からの距離*/
+	left: 0%; /*左からの距離*/
+	width: 90%; /*ボタンの幅*/
+}
+
+.more-btn a::after {
+	bottom: -5px; /*矢印の下からの距離*/
+	right: 10%; /*右からの距離*/
+	width: 15px; /*矢印部分の幅*/
+	transform: rotate(35deg); /*角度調整*/
+}
+
+/*マウスオーバー時の動き*/
+.more-btn a:hover::before{
+	left: 10%;
+}
+
+.more-btn a:hover::after {
+	right:0%;
+}
+
+
+.heading-31 {
+        position: relative;
+        padding: .3em 0 .2em 1em;
+        width: 40%;
+        border-bottom: 5px dotted #f7b977;
+        color: #333333;
+    }
+
+    .heading-31::before {
+        position: absolute;
+        top: 0;
+        left: .3em;
+        transform: rotate(55deg);
+        height: 13px;
+        width: 14px;
+        background: #f7b977;
+        content: '';
+    }
+
+    .heading-31::after {
+        position: absolute;
+        transform: rotate(15deg);
+        top: .6em;
+        left: 0;
+        height: 11px;
+        width: 11px;
+        background: #f7b977;
+        content: '';
+    }
+
+
+   
+.heading-10 {
+    display: inline-block;
+    position: relative;
+    transform: rotate(-5deg);
+    padding: .5em .7em;
+    border-left: 2px dotted rgba(0, 0, 0, .1);
+    border-right: 2px dotted rgba(0, 0, 0, .1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+    background-color: #cee4ae;
+    color: #333333;
+}
+
+
+    </style>
+</head>
+    <body>
+    
+    <h1>Title Heading</h1>
+    <h2 class="title3_1" data-no="■">CSSのみで再現可能な見出しデザイン</h2>
+    <h2 class="heading-31">CSS見出しデザイン</h2>
+
+    <h3 class="heading-10">紙膠帶標題</h3>
+
+    <p class="more-btn"><a href="リンク先URL">1234567897789746454656</a></p>
+   
+  
+  
+  </body>
+   
+
+
+
+</html>
